@@ -1,4 +1,5 @@
 {
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1758706987720,
     "description" : "",
@@ -7,5 +8,63 @@
     "name" : "sample",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "sample",
+    "outputPorts" : [ ],
+    "parameterContextName" : "William",
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : {
+    "William" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "description" : "",
+      "inheritedParameterContexts" : [ ],
+      "name" : "William",
+      "parameters" : [ {
+        "description" : "",
+        "name" : "CDG_KEY",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "cuZhBGghmCyhvxsJ92kjf79KWjsVAQLNV0Ix0o5U"
+      }, {
+        "description" : "",
+        "name" : "cdgType",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "bill"
+      } ]
+    }
+  },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "author" : "bd9eac77-1a10-425b-b77c-1436a22ec963",
+    "flowIdentifier" : "sample",
+    "timestamp" : 1758706988312
+  }
 }
