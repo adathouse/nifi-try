@@ -244,10 +244,10 @@
       "prioritizers" : [ ],
       "selectedRelationships" : [ "Response" ],
       "source" : {
-        "comments" : "",
+        "comments" : "\n\neaxample graphql json\n\n{\n  \"query\": \"query GreetingQuery ($arg1: String) { hello (name: $arg1) { value } }\",\n  \"operationName\": \"GreetingQuery\",\n  \"variables\": { \"arg1\": \"Timothy\" }\n}\n",
         "groupId" : "flow-contents-group",
         "id" : "afbe2696-67ef-3eb4-9c1d-254636a0a5d8",
-        "name" : "InvokeHTTP",
+        "name" : "Query current hash",
         "type" : "PROCESSOR"
       },
       "zIndex" : 28
@@ -410,10 +410,10 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
-        "comments" : "",
+        "comments" : "\n\neaxample graphql json\n\n{\n  \"query\": \"query GreetingQuery ($arg1: String) { hello (name: $arg1) { value } }\",\n  \"operationName\": \"GreetingQuery\",\n  \"variables\": { \"arg1\": \"Timothy\" }\n}\n",
         "groupId" : "flow-contents-group",
         "id" : "afbe2696-67ef-3eb4-9c1d-254636a0a5d8",
-        "name" : "InvokeHTTP",
+        "name" : "Query current hash",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -2199,14 +2199,14 @@
         "group" : "org.apache.nifi",
         "version" : "2.6.0"
       },
-      "comments" : "",
+      "comments" : "\n\neaxample graphql json\n\n{\n  \"query\": \"query GreetingQuery ($arg1: String) { hello (name: $arg1) { value } }\",\n  \"operationName\": \"GreetingQuery\",\n  \"variables\": { \"arg1\": \"Timothy\" }\n}\n",
       "componentType" : "PROCESSOR",
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "afbe2696-67ef-3eb4-9c1d-254636a0a5d8",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "InvokeHTTP",
+      "name" : "Query current hash",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -1536.0,
@@ -2626,8 +2626,8 @@
       "name" : "Get Url",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -816.0,
-        "y" : -40.0
+        "x" : -720.0,
+        "y" : 0.0
       },
       "properties" : {
         "Destination" : "flowfile-attribute",
@@ -2722,6 +2722,6 @@
   "snapshotMetadata" : {
     "author" : "b3c8eb28-3ac4-4df2-8999-d572d402b5a2",
     "flowIdentifier" : "sample",
-    "timestamp" : 1758917690600
+    "timestamp" : 1758918565973
   }
 }
