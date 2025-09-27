@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1759014510233,
+    "description" : "read the cdg bills endpoint and emit all of the changed or new bills.",
+    "identifier" : "ProcessCDGBatches",
+    "lastModifiedTimestamp" : 1759014510233,
+    "name" : "ProcessCDGBatches",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
