@@ -198,36 +198,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "87e97ec6-27a2-3934-9430-94a34cb702e5",
-        "name" : "LogAttribute",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "37bfbc09-aa09-3c1d-88b2-edf8f9d54c2b",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "unmatched" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "d89de344-a8f0-358b-91b7-417979de1cb0",
-        "name" : "RouteOnAttribute",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 14
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "8d37e6cc-0199-1000-ea6b-3907f5e85eeb",
         "name" : "Get CDG batch",
         "type" : "PROCESSOR"
@@ -348,6 +318,36 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "87e97ec6-27a2-3934-9430-94a34cb702e5",
+        "name" : "LogAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88a32c88-a715-3ac3-a5d8-b3ea93755e8c",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "002c7524-1004-3910-aeac-991612d8e218",
+        "name" : "Decrement skipped",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 20
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "8d3ca26c-0199-1000-3526-12e17e8a150a",
         "name" : "Get Url",
         "type" : "PROCESSOR"
@@ -438,8 +438,38 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "002c7524-1004-3910-aeac-991612d8e218",
+        "name" : "Decrement skipped",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ccebcfa5-be43-3ad3-8fa6-375695e1019b",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "d89de344-a8f0-358b-91b7-417979de1cb0",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 19
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "4efbaa4a-bd48-3bc3-86ba-75afb603ec55",
-        "name" : "UpdateCounter",
+        "name" : "Increment skipped",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -484,8 +514,8 @@
       "name" : "Emit Bill",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : -472.0,
-        "y" : 2064.0
+        "x" : 256.0,
+        "y" : 2072.0
       },
       "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
@@ -497,6 +527,57 @@
     },
     "processGroups" : [ ],
     "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.6.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "002c7524-1004-3910-aeac-991612d8e218",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Decrement skipped",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -536.0,
+        "y" : 1792.0
+      },
+      "properties" : {
+        "counter-name" : "UnchangedBills",
+        "delta" : "-1"
+      },
+      "propertyDescriptors" : {
+        "counter-name" : {
+          "displayName" : "Counter Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "counter-name",
+          "sensitive" : false
+        },
+        "delta" : {
+          "displayName" : "Delta",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "delta",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.UpdateCounter",
+      "yieldDuration" : "1 sec"
+    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -824,7 +905,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "4efbaa4a-bd48-3bc3-86ba-75afb603ec55",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "UpdateCounter",
+      "name" : "Increment skipped",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -544.0,
@@ -878,8 +959,8 @@
       "name" : "LogAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -544.0,
-        "y" : 1792.0
+        "x" : -520.0,
+        "y" : 2024.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -2050,6 +2131,6 @@
   "snapshotMetadata" : {
     "author" : "b3c8eb28-3ac4-4df2-8999-d572d402b5a2",
     "flowIdentifier" : "ProcessCDGBatches",
-    "timestamp" : 1759014510825
+    "timestamp" : 1759014942619
   }
 }
