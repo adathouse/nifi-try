@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1759097725338,
+    "description" : "Steps to ingest a bill and all of its dependent types.",
+    "identifier" : "ingestbill",
+    "lastModifiedTimestamp" : 1759097725338,
+    "name" : "ingest_bill",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
