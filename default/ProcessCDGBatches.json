@@ -47,66 +47,6 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "8ed5d29c-555b-3afc-b57d-afd18e48334c",
-        "name" : "LogMessage",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "1d4432be-dd1a-3d17-9855-6e9ca934749c",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "unmatched" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f99a80f4-41a0-340f-9b1b-d7c43b3e47f9",
-        "name" : "Halt on skip limit",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 18
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f99a80f4-41a0-340f-9b1b-d7c43b3e47f9",
-        "name" : "Halt on skip limit",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "2af7770c-c77a-346d-a102-5e31bbe54a11",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "original" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "8d3ca26b-0199-1000-4953-726820379e8e",
-        "name" : "Split Bills",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 16
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
         "groupId" : "flow-contents-group",
         "id" : "8de6d40c-1f5c-3355-89d8-f90b857d1d58",
         "name" : "Emit Bill",
@@ -160,36 +100,6 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 11
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "8d37e6cd-0199-1000-ac13-10e56631ccb6",
-        "name" : "Get next batch",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "3186c801-d68b-33bc-bc0b-11ba674613cf",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "continueBatches" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "f99a80f4-41a0-340f-9b1b-d7c43b3e47f9",
-        "name" : "Halt on skip limit",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 17
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -258,28 +168,28 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "8d37e6cc-0199-1000-ea6b-3907f5e85eeb",
-        "name" : "Get CDG batch",
+        "id" : "8d37e6cd-0199-1000-ac13-10e56631ccb6",
+        "name" : "Get next batch",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "46e04a7c-c8ad-36b2-9bf3-0c4b070b169b",
+      "identifier" : "56af5d55-8b7c-331c-b016-1c0ab903371a",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
       "partitioningAttribute" : "",
       "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
+      "selectedRelationships" : [ "original" ],
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "8d37e6cb-0199-1000-ba0e-2bcbe575e1bd",
-        "name" : "Begin CDG iteration",
+        "id" : "8d3ca26b-0199-1000-4953-726820379e8e",
+        "name" : "Split Bills",
         "type" : "PROCESSOR"
       },
-      "zIndex" : 1
+      "zIndex" : 34
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -486,7 +396,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "002c7524-1004-3910-aeac-991612d8e218",
-        "name" : "Decrement skipped",
+        "name" : "Increment changed",
         "type" : "PROCESSOR"
       },
       "zIndex" : 20
@@ -520,6 +430,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 4
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "8d37e6cc-0199-1000-ea6b-3907f5e85eeb",
+        "name" : "Get CDG batch",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "8fbf4cea-818f-3d5e-b8aa-91b9281aef2d",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "8d37e6cb-0199-1000-ba0e-2bcbe575e1bd",
+        "name" : "Begin CDG iteration",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 33
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -679,7 +619,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "002c7524-1004-3910-aeac-991612d8e218",
-        "name" : "Decrement skipped",
+        "name" : "Increment changed",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -814,8 +754,8 @@
       "name" : "Emit Bill",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : 256.0,
-        "y" : 2072.0
+        "x" : 248.0,
+        "y" : 2240.0
       },
       "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
@@ -842,15 +782,15 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "002c7524-1004-3910-aeac-991612d8e218",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "Decrement skipped",
+      "name" : "Increment changed",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -536.0,
-        "y" : 1792.0
+        "x" : -544.0,
+        "y" : 1968.0
       },
       "properties" : {
-        "counter-name" : "UnchangedBills",
-        "delta" : "-1"
+        "counter-name" : "ChangedBills",
+        "delta" : "1"
       },
       "propertyDescriptors" : {
         "counter-name" : {
@@ -896,8 +836,8 @@
       "name" : "Batch failure",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -432.0,
-        "y" : -152.0
+        "x" : -536.0,
+        "y" : -336.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -905,7 +845,7 @@
         "Log Level" : "info",
         "attributes-to-log-regex" : ".*",
         "Output Format" : "Line per Attribute",
-        "Log Payload" : "false"
+        "Log Payload" : "true"
       },
       "propertyDescriptors" : {
         "Log prefix" : {
@@ -1007,8 +947,8 @@
       "name" : "Get bill change id",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 160.0,
-        "y" : 1456.0
+        "x" : 216.0,
+        "y" : 1528.0
       },
       "properties" : {
         "Request Content-Encoding" : "DISABLED",
@@ -1320,8 +1260,8 @@
       "name" : "Bill processing failure",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 800.0,
-        "y" : 1056.0
+        "x" : 1112.0,
+        "y" : 1064.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -1431,8 +1371,8 @@
       "name" : "Increment skipped",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -520.0,
-        "y" : 1168.0
+        "x" : -544.0,
+        "y" : 1504.0
       },
       "properties" : {
         "counter-name" : "UnchangedBills",
@@ -1482,8 +1422,8 @@
       "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 160.0,
-        "y" : 1064.0
+        "x" : 208.0,
+        "y" : 1136.0
       },
       "properties" : {
         "variables" : "{ \"billId\": \"${url:substringBefore('?')}\" }",
@@ -1571,8 +1511,8 @@
       "name" : "LogAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -520.0,
-        "y" : 2024.0
+        "x" : -544.0,
+        "y" : 2200.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -1683,7 +1623,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : 160.0,
-        "y" : -248.0
+        "y" : -416.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -1787,8 +1727,8 @@
       "name" : "Get CDG batch",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 184.0,
-        "y" : 88.0
+        "x" : 168.0,
+        "y" : -80.0
       },
       "properties" : {
         "Request Content-Encoding" : "DISABLED",
@@ -2100,8 +2040,8 @@
       "name" : "Get next batch",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -536.0,
-        "y" : 88.0
+        "x" : -528.0,
+        "y" : 72.0
       },
       "properties" : {
         "Destination" : "flowfile-attribute",
@@ -2183,8 +2123,8 @@
       "name" : "Split Bills",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 152.0,
-        "y" : 352.0
+        "x" : 192.0,
+        "y" : 344.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -2242,7 +2182,7 @@
       "name" : "Get Url",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 168.0,
+        "x" : 200.0,
         "y" : 624.0
       },
       "properties" : {
@@ -2325,8 +2265,8 @@
       "name" : "CryptographicHashContent",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 160.0,
-        "y" : 848.0
+        "x" : 208.0,
+        "y" : 912.0
       },
       "properties" : {
         "hash_algorithm" : "SHA-256",
@@ -2358,64 +2298,6 @@
       "type" : "org.apache.nifi.processors.standard.CryptographicHashContent",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ "success" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.6.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "8ed5d29c-555b-3afc-b57d-afd18e48334c",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "LogMessage",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -1192.0,
-        "y" : 376.0
-      },
-      "properties" : {
-        "log-message" : "Found ${UnchangedBills} unchanged bills. Stopping iteraction.",
-        "log-level" : "info"
-      },
-      "propertyDescriptors" : {
-        "log-message" : {
-          "displayName" : "Log message",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "log-message",
-          "sensitive" : false
-        },
-        "log-level" : {
-          "displayName" : "Log Level",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "log-level",
-          "sensitive" : false
-        },
-        "log-prefix" : {
-          "displayName" : "Log prefix",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "log-prefix",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.LogMessage",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -2434,8 +2316,8 @@
       "name" : "Create GraphQL payload",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 160.0,
-        "y" : 1248.0
+        "x" : 216.0,
+        "y" : 1352.0
       },
       "properties" : {
         "Destination" : "flowfile-content",
@@ -2524,8 +2406,8 @@
       "name" : "log graphql",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -232.0,
-        "y" : 1448.0
+        "x" : -432.0,
+        "y" : 1352.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -2635,8 +2517,8 @@
       "name" : "Get change id",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 160.0,
-        "y" : 1704.0
+        "x" : 216.0,
+        "y" : 1744.0
       },
       "properties" : {
         "Destination" : "flowfile-content",
@@ -2719,7 +2601,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -544.0,
-        "y" : 1568.0
+        "y" : 1736.0
       },
       "properties" : {
         "Routing Strategy" : "Route to Property name",
@@ -2738,57 +2620,6 @@
           "dynamic" : true,
           "identifiesControllerService" : false,
           "name" : "billUnchanged",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.6.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "f99a80f4-41a0-340f-9b1b-d7c43b3e47f9",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "Halt on skip limit",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -536.0,
-        "y" : 360.0
-      },
-      "properties" : {
-        "Routing Strategy" : "Route to Property name",
-        "continueBatches" : "${UnchangedBills:le(500)}"
-      },
-      "propertyDescriptors" : {
-        "Routing Strategy" : {
-          "displayName" : "Routing Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Routing Strategy",
-          "sensitive" : false
-        },
-        "continueBatches" : {
-          "displayName" : "continueBatches",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "continueBatches",
           "sensitive" : false
         }
       },
@@ -2833,6 +2664,6 @@
   "snapshotMetadata" : {
     "author" : "b3c8eb28-3ac4-4df2-8999-d572d402b5a2",
     "flowIdentifier" : "ProcessCDGBatches",
-    "timestamp" : 1759099643650
+    "timestamp" : 1759104226347
   }
 }
