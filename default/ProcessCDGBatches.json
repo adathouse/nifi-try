@@ -348,6 +348,36 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "87e97ec6-27a2-3934-9430-94a34cb702e5",
+        "name" : "LogAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "835522dc-80fd-37f2-b66a-1bad640da80c",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "a88cbaf0-9c58-3044-8315-e289a50e0d74",
+        "name" : "Reset change id",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 42
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "2c1d95c7-6203-3797-be36-9b43dbf9c123",
         "name" : "Funnel",
         "type" : "FUNNEL"
@@ -378,8 +408,8 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "87e97ec6-27a2-3934-9430-94a34cb702e5",
-        "name" : "LogAttribute",
+        "id" : "a88cbaf0-9c58-3044-8315-e289a50e0d74",
+        "name" : "Reset change id",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -762,8 +792,8 @@
       "name" : "Emit Bill",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : 248.0,
-        "y" : 2296.0
+        "x" : 272.0,
+        "y" : 2504.0
       },
       "scheduledState" : "ENABLED",
       "type" : "OUTPUT_PORT"
@@ -969,7 +999,7 @@
         "Socket Idle Connections" : "5",
         "Request Body Enabled" : "true",
         "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
-        "HTTP URL" : "http://dotnet8-dev:5208/graphql/",
+        "HTTP URL" : "#{GRAPHQL_URL}",
         "Socket Idle Timeout" : "5 mins",
         "Response Redirects Enabled" : "True",
         "Socket Write Timeout" : "15 secs",
@@ -1438,6 +1468,7 @@
         "Store State" : "Do not store state",
         "canonical-value-lookup-cache-size" : "100",
         "query" : "query($billId: String!) { findBill(cdgId: $billId) { changeId } }",
+        "changeId" : "todo",
         "priority" : "${now():toNumber():minus(${updated:toDate('yyyy-MM-dd'):toNumber()})}"
       },
       "propertyDescriptors" : {
@@ -1474,6 +1505,13 @@
           "dynamic" : true,
           "identifiesControllerService" : false,
           "name" : "query",
+          "sensitive" : false
+        },
+        "changeId" : {
+          "displayName" : "changeId",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "changeId",
           "sensitive" : false
         },
         "Stateful Variables Initial Value" : {
@@ -1519,8 +1557,8 @@
       "name" : "LogAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -544.0,
-        "y" : 2256.0
+        "x" : 216.0,
+        "y" : 2272.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -2408,6 +2446,79 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
+        "artifact" : "nifi-update-attribute-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.6.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "a88cbaf0-9c58-3044-8315-e289a50e0d74",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Reset change id",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -544.0,
+        "y" : 2272.0
+      },
+      "properties" : {
+        "Store State" : "Do not store state",
+        "canonical-value-lookup-cache-size" : "100",
+        "changeId" : "${content_SHA-256}"
+      },
+      "propertyDescriptors" : {
+        "Delete Attributes Expression" : {
+          "displayName" : "Delete Attributes Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Delete Attributes Expression",
+          "sensitive" : false
+        },
+        "Store State" : {
+          "displayName" : "Store State",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Store State",
+          "sensitive" : false
+        },
+        "canonical-value-lookup-cache-size" : {
+          "displayName" : "Cache Value Lookup Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "canonical-value-lookup-cache-size",
+          "sensitive" : false
+        },
+        "changeId" : {
+          "displayName" : "changeId",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "changeId",
+          "sensitive" : false
+        },
+        "Stateful Variables Initial Value" : {
+          "displayName" : "Stateful Variables Initial Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Stateful Variables Initial Value",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
         "version" : "2.6.0"
@@ -2556,6 +2667,12 @@
         "provided" : false,
         "sensitive" : false,
         "value" : "cuZhBGghmCyhvxsJ92kjf79KWjsVAQLNV0Ix0o5U"
+      }, {
+        "description" : "",
+        "name" : "GRAPHQL_URL",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "http://dotnet8-dev:5208/graphql/"
       } ]
     }
   },
@@ -2563,6 +2680,6 @@
   "snapshotMetadata" : {
     "author" : "201bcb3a-356c-4d4c-93dd-647a2211c0d4",
     "flowIdentifier" : "ProcessCDGBatches",
-    "timestamp" : 1759523204546
+    "timestamp" : 1759584063887
   }
 }
