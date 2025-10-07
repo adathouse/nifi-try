@@ -2175,7 +2175,7 @@
           "sensitive" : false
         }
       },
-      "retriedRelationships" : [ ],
+      "retriedRelationships" : [ "Failure", "No Retry", "Retry" ],
       "retryCount" : 10,
       "runDurationMillis" : 0,
       "scheduledState" : "ENABLED",
@@ -2809,7 +2809,7 @@
           "sensitive" : false
         }
       },
-      "retriedRelationships" : [ ],
+      "retriedRelationships" : [ "Failure", "No Retry", "Retry" ],
       "retryCount" : 10,
       "runDurationMillis" : 0,
       "scheduledState" : "ENABLED",
@@ -3021,8 +3021,8 @@
       "name" : "Split cosponsors",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 8.0,
-        "y" : 2192.0
+        "x" : -144.0,
+        "y" : 2688.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -3162,7 +3162,7 @@
         "Max String Length" : "20 MB",
         "Return Type" : "auto-detect",
         "Null Value Representation" : "empty string",
-        "url" : "$.cosponsors",
+        "url" : "$.cosponsors.url",
         "Path Not Found Behavior" : "ignore"
       },
       "propertyDescriptors" : {
@@ -3253,7 +3253,7 @@
         "Max String Length" : "20 MB",
         "Return Type" : "auto-detect",
         "Null Value Representation" : "empty string",
-        "url" : "$.textVersions",
+        "url" : "$.textVersions.url",
         "Path Not Found Behavior" : "ignore"
       },
       "propertyDescriptors" : {
@@ -3557,8 +3557,8 @@
       "name" : "Get next batch",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1392.0,
-        "y" : 2592.0
+        "x" : -1064.0,
+        "y" : 1944.0
       },
       "properties" : {
         "Destination" : "flowfile-attribute",
@@ -3640,8 +3640,8 @@
       "name" : "Split actions",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -704.0,
-        "y" : 2112.0
+        "x" : -888.0,
+        "y" : 2576.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -3699,8 +3699,8 @@
       "name" : "Split text versions",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 560.0,
-        "y" : 2232.0
+        "x" : 536.0,
+        "y" : 2696.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -3767,7 +3767,7 @@
         "Max String Length" : "20 MB",
         "Return Type" : "auto-detect",
         "Null Value Representation" : "empty string",
-        "url" : "$.titles",
+        "url" : "$.titles.url",
         "Path Not Found Behavior" : "ignore"
       },
       "propertyDescriptors" : {
@@ -3858,7 +3858,7 @@
         "Max String Length" : "20 MB",
         "Return Type" : "auto-detect",
         "Null Value Representation" : "empty string",
-        "url" : "$.committees",
+        "url" : "$.committees.url",
         "Path Not Found Behavior" : "ignore"
       },
       "propertyDescriptors" : {
@@ -3940,8 +3940,8 @@
       "name" : "Split titles",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1096.0,
-        "y" : 2280.0
+        "x" : 1024.0,
+        "y" : 2728.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -4724,7 +4724,7 @@
         "Max String Length" : "20 MB",
         "Return Type" : "auto-detect",
         "Null Value Representation" : "empty string",
-        "url" : "$.actions",
+        "url" : "$.actions.url",
         "Path Not Found Behavior" : "ignore"
       },
       "propertyDescriptors" : {
@@ -4970,8 +4970,8 @@
       "name" : "Index bill failure",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1104.0,
-        "y" : 240.0
+        "x" : 1360.0,
+        "y" : 232.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -5185,6 +5185,6 @@
   "snapshotMetadata" : {
     "author" : "201bcb3a-356c-4d4c-93dd-647a2211c0d4",
     "flowIdentifier" : "ingestbill",
-    "timestamp" : 1759584087945
+    "timestamp" : 1759859138053
   }
 }
