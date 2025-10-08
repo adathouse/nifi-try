@@ -277,7 +277,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "009ca0e0-b464-38c3-bf6f-3d11d6676447",
-        "name" : "RouteOnAttribute",
+        "name" : "Filter null URLs",
         "type" : "PROCESSOR"
       },
       "zIndex" : 66
@@ -918,36 +918,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "39d5fab3-ec4f-3bea-a358-5cf62486d52f",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "b504df93-38e6-3d7a-a197-a2cd46c1a7c2",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "failure", "unmatched" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "aba0b4f3-0199-1000-30a6-3d1bbd2b8754",
-        "name" : "Get next batch",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 54
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "c80db407-2786-3baf-a131-2d7d90920fcd",
         "name" : "Make graphql params",
         "type" : "PROCESSOR"
@@ -1489,7 +1459,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "009ca0e0-b464-38c3-bf6f-3d11d6676447",
-        "name" : "RouteOnAttribute",
+        "name" : "Filter null URLs",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -1540,6 +1510,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 29
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "e0172190-767c-32ff-8e1b-a0884b3b1752",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f543bad7-96c2-30e6-ae82-0e1650a14278",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure", "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "aba0b4f3-0199-1000-30a6-3d1bbd2b8754",
+        "name" : "Get next batch",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 82
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -1644,48 +1644,48 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "03da26b9-0cc8-36aa-996d-9ec1a9543255",
       "position" : {
-        "x" : -512.0,
-        "y" : 2328.0
+        "x" : -816.0,
+        "y" : 2704.0
       }
     }, {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "22b28961-cafd-396b-89b2-8773ab77f03f",
       "position" : {
-        "x" : 875.5316952171306,
-        "y" : 304.28828382215045
+        "x" : 984.0,
+        "y" : 272.0
       }
     }, {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "3559f6af-2196-30b4-8121-cd44986a20d2",
       "position" : {
-        "x" : 224.0,
-        "y" : 904.0
+        "x" : 312.0,
+        "y" : 1320.0
       }
     }, {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "39d5fab3-ec4f-3bea-a358-5cf62486d52f",
       "position" : {
-        "x" : -1440.0,
-        "y" : 3032.0
+        "x" : 1944.0,
+        "y" : 4328.0
       }
     }, {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "7b471f13-c374-35f0-9224-3508ba7eae66",
       "position" : {
-        "x" : 216.0,
-        "y" : 1320.0
+        "x" : 320.0,
+        "y" : 1864.0
       }
     }, {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "e0172190-767c-32ff-8e1b-a0884b3b1752",
       "position" : {
-        "x" : 1416.0,
-        "y" : 1576.0
+        "x" : -296.0,
+        "y" : 2448.0
       }
     } ],
     "identifier" : "flow-contents-group",
@@ -1698,8 +1698,8 @@
       "name" : "Start bill ingest",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : -560.0,
-        "y" : -320.0
+        "x" : -568.0,
+        "y" : -240.0
       },
       "scheduledState" : "ENABLED",
       "type" : "INPUT_PORT"
@@ -1730,11 +1730,11 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "009ca0e0-b464-38c3-bf6f-3d11d6676447",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "RouteOnAttribute",
+      "name" : "Filter null URLs",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 56.0,
-        "y" : 1496.0
+        "x" : 168.0,
+        "y" : 1992.0
       },
       "properties" : {
         "Routing Strategy" : "Route to Property name",
@@ -1766,89 +1766,6 @@
       "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.6.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "3789e899-3f43-3fcb-9739-dee5b512d4ae",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "Get action param",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -1584.0,
-        "y" : 3224.0
-      },
-      "properties" : {
-        "Destination" : "flowfile-attribute",
-        "Max String Length" : "20 MB",
-        "Return Type" : "json",
-        "action" : "$.*",
-        "Null Value Representation" : "empty string",
-        "Path Not Found Behavior" : "ignore"
-      },
-      "propertyDescriptors" : {
-        "Destination" : {
-          "displayName" : "Destination",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Destination",
-          "sensitive" : false
-        },
-        "Max String Length" : {
-          "displayName" : "Max String Length",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Max String Length",
-          "sensitive" : false
-        },
-        "Return Type" : {
-          "displayName" : "Return Type",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Return Type",
-          "sensitive" : false
-        },
-        "action" : {
-          "displayName" : "action",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "action",
-          "sensitive" : false
-        },
-        "Null Value Representation" : {
-          "displayName" : "Null Value Representation",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Null Value Representation",
-          "sensitive" : false
-        },
-        "Path Not Found Behavior" : {
-          "displayName" : "Path Not Found Behavior",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Path Not Found Behavior",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ "Original" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -1867,8 +1784,8 @@
       "name" : "Get bill",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 32.0,
-        "y" : -352.0
+        "x" : 160.0,
+        "y" : -288.0
       },
       "properties" : {
         "Request Content-Encoding" : "DISABLED",
@@ -2180,8 +2097,8 @@
       "name" : "Index bill",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 56.0,
-        "y" : 656.0
+        "x" : 160.0,
+        "y" : 728.0
       },
       "properties" : {
         "Request Content-Encoding" : "DISABLED",
@@ -2493,8 +2410,8 @@
       "name" : "Zero batchOffset",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -328.0,
-        "y" : 784.0
+        "x" : 160.0,
+        "y" : 1032.0
       },
       "properties" : {
         "Store State" : "Do not store state",
@@ -2566,8 +2483,8 @@
       "name" : "Get batch",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 64.0,
-        "y" : 1816.0
+        "x" : 168.0,
+        "y" : 2240.0
       },
       "properties" : {
         "Request Content-Encoding" : "DISABLED",
@@ -2879,8 +2796,8 @@
       "name" : "Get offset",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -848.0,
-        "y" : 1496.0
+        "x" : -968.0,
+        "y" : 2248.0
       },
       "properties" : {
         "Store State" : "Do not store state",
@@ -2952,8 +2869,8 @@
       "name" : "Log subtype ingest complete",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -144.0,
-        "y" : 4360.0
+        "x" : 88.0,
+        "y" : 5120.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -3063,8 +2980,8 @@
       "name" : "Split cosponsors",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -80.0,
-        "y" : 2928.0
+        "x" : -384.0,
+        "y" : 3376.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -3122,8 +3039,8 @@
       "name" : "Get sequence",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -736.0,
-        "y" : 3440.0
+        "x" : -952.0,
+        "y" : 3944.0
       },
       "properties" : {
         "sequence" : "${fragment.index:plus(${batchOffset})}",
@@ -3203,8 +3120,8 @@
       "name" : "Batch failure",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1496.0,
-        "y" : 1728.0
+        "x" : -448.0,
+        "y" : 2688.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -3314,8 +3231,8 @@
       "name" : "Get actions URL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -632.0,
-        "y" : 1064.0
+        "x" : -744.0,
+        "y" : 1560.0
       },
       "properties" : {
         "cdgType" : "actions",
@@ -3395,8 +3312,8 @@
       "name" : "Get next batch",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -872.0,
-        "y" : 1960.0
+        "x" : -968.0,
+        "y" : 2488.0
       },
       "properties" : {
         "Destination" : "flowfile-attribute",
@@ -3478,8 +3395,8 @@
       "name" : "Split actions",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1040.0,
-        "y" : 2864.0
+        "x" : -960.0,
+        "y" : 3376.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -3537,8 +3454,8 @@
       "name" : "Split text versions",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 576.0,
-        "y" : 2856.0
+        "x" : 168.0,
+        "y" : 3376.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -3596,8 +3513,8 @@
       "name" : "Split titles",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1136.0,
-        "y" : 2856.0
+        "x" : 760.0,
+        "y" : 3368.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -3655,8 +3572,8 @@
       "name" : "Split Committees",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1464.0,
-        "y" : 2640.0
+        "x" : 1280.0,
+        "y" : 3368.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -3714,8 +3631,8 @@
       "name" : "Get request param",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 48.0,
-        "y" : 2120.0
+        "x" : 168.0,
+        "y" : 2472.0
       },
       "properties" : {
         "Destination" : "flowfile-attribute",
@@ -3797,8 +3714,8 @@
       "name" : "Make graphql payload",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 40.0,
-        "y" : 360.0
+        "x" : 168.0,
+        "y" : 456.0
       },
       "properties" : {
         "Destination" : "flowfile-content",
@@ -3887,8 +3804,8 @@
       "name" : "Create GraphQL payload",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -688.0,
-        "y" : 3896.0
+        "x" : 80.0,
+        "y" : 4568.0
       },
       "properties" : {
         "Destination" : "flowfile-content",
@@ -3977,8 +3894,8 @@
       "name" : "Create action graphql params",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -656.0,
-        "y" : 3672.0
+        "x" : -952.0,
+        "y" : 4176.0
       },
       "properties" : {
         "variables" : "{ \n\"input\": {\n  \"action\": ${action},\n  \"url\": \"${url}\",\n  \"request\": ${request},\n  \"sequence\": ${sequence},\n  \"changeId\": \"${changeId}\"\n  } \n}",
@@ -4058,8 +3975,8 @@
       "name" : "Index subtype",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -128.0,
-        "y" : 4064.0
+        "x" : 80.0,
+        "y" : 4848.0
       },
       "properties" : {
         "Request Content-Encoding" : "DISABLED",
@@ -4371,8 +4288,8 @@
       "name" : "RouteOnAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -8.0,
-        "y" : 2640.0
+        "x" : 176.0,
+        "y" : 2816.0
       },
       "properties" : {
         "routeCosponsors" : "${cdgType:equals('cosponsors')}",
@@ -4454,8 +4371,8 @@
       "name" : "Get cosponsors URL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -128.0,
-        "y" : 1064.0
+        "x" : -240.0,
+        "y" : 1552.0
       },
       "properties" : {
         "cdgType" : "cosponsors",
@@ -4543,8 +4460,8 @@
       "name" : "Get text versions URL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 336.0,
-        "y" : 1080.0
+        "x" : 184.0,
+        "y" : 1552.0
       },
       "properties" : {
         "cdgType" : "textVersions",
@@ -4632,8 +4549,8 @@
       "name" : "Get titles URL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 744.0,
-        "y" : 1136.0
+        "x" : 624.0,
+        "y" : 1568.0
       },
       "properties" : {
         "cdgType" : "titles",
@@ -4721,8 +4638,8 @@
       "name" : "Get Committees URL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1248.0,
-        "y" : 1136.0
+        "x" : 1072.0,
+        "y" : 1568.0
       },
       "properties" : {
         "cdgType" : "committees",
@@ -4810,8 +4727,8 @@
       "name" : "Make graphql params",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 40.0,
-        "y" : 104.0
+        "x" : 168.0,
+        "y" : 232.0
       },
       "properties" : {
         "variables" : "{ \"input\": { \"bill\": ${bill}, \"request\": ${request}, \"url\": \"${url}\", \"changeId\": \"${content_SHA-256}\" } }",
@@ -4891,8 +4808,8 @@
       "name" : "Index bill failure",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1360.0,
-        "y" : 232.0
+        "x" : 840.0,
+        "y" : 632.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -5002,8 +4919,8 @@
       "name" : "Get bill values",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 40.0,
-        "y" : -128.0
+        "x" : 176.0,
+        "y" : -8.0
       },
       "properties" : {
         "Destination" : "flowfile-attribute",
@@ -5133,8 +5050,8 @@
       "name" : "Get action",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -688.0,
-        "y" : 3176.0
+        "x" : -952.0,
+        "y" : 3640.0
       },
       "properties" : {
         "Enable Unicode Predefined Character Classes" : "false",
@@ -5309,6 +5226,6 @@
   "snapshotMetadata" : {
     "author" : "201bcb3a-356c-4d4c-93dd-647a2211c0d4",
     "flowIdentifier" : "ingestbill",
-    "timestamp" : 1759886838627
+    "timestamp" : 1759935671437
   }
 }
