@@ -1128,36 +1128,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "8633d89c-6285-3662-a8f9-c714a228a1ae",
-        "name" : "Log subtype ingest complete",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "957b93af-8498-3400-bbba-bd2f08b4bfc3",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "18384a9c-ba68-3b9c-a3f5-c8dd28742683",
-        "name" : "Increment subtype success",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 94
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "c56cfcd5-0199-1000-04a3-fec0edb47235",
         "name" : "Committees processing failure",
         "type" : "PROCESSOR"
@@ -2477,7 +2447,7 @@
       "type" : "org.apache.nifi.processors.standard.UpdateCounter",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ ],
+      "autoTerminatedRelationships" : [ "success" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -3758,8 +3728,8 @@
       "name" : "Build action payload",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -952.0,
-        "y" : 3960.0
+        "x" : -1272.0,
+        "y" : 4056.0
       },
       "properties" : {
         "Regular Expression" : "(?s)(^.*$)",
@@ -3847,117 +3817,6 @@
       "type" : "org.apache.nifi.processors.standard.ReplaceText",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ "success" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.6.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "8633d89c-6285-3662-a8f9-c714a228a1ae",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "Log subtype ingest complete",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -184.0,
-        "y" : 5088.0
-      },
-      "properties" : {
-        "character-set" : "UTF-8",
-        "Log FlowFile Properties" : "true",
-        "Log Level" : "info",
-        "attributes-to-log-regex" : ".*",
-        "Output Format" : "Line per Attribute",
-        "Log Payload" : "true"
-      },
-      "propertyDescriptors" : {
-        "Log prefix" : {
-          "displayName" : "Log prefix",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Log prefix",
-          "sensitive" : false
-        },
-        "character-set" : {
-          "displayName" : "Character Set",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "character-set",
-          "sensitive" : false
-        },
-        "Log FlowFile Properties" : {
-          "displayName" : "Log FlowFile Properties",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Log FlowFile Properties",
-          "sensitive" : false
-        },
-        "Log Level" : {
-          "displayName" : "Log Level",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Log Level",
-          "sensitive" : false
-        },
-        "attributes-to-ignore-regex" : {
-          "displayName" : "Attributes to Ignore by Regular Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "attributes-to-ignore-regex",
-          "sensitive" : false
-        },
-        "Attributes to Ignore" : {
-          "displayName" : "Attributes to Ignore",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Attributes to Ignore",
-          "sensitive" : false
-        },
-        "Attributes to Log" : {
-          "displayName" : "Attributes to Log",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Attributes to Log",
-          "sensitive" : false
-        },
-        "attributes-to-log-regex" : {
-          "displayName" : "Attributes to Log by Regular Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "attributes-to-log-regex",
-          "sensitive" : false
-        },
-        "Output Format" : {
-          "displayName" : "Output Format",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Output Format",
-          "sensitive" : false
-        },
-        "Log Payload" : {
-          "displayName" : "Log Payload",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Log Payload",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.LogAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -3976,8 +3835,8 @@
       "name" : "Split cosponsors",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -384.0,
-        "y" : 3376.0
+        "x" : -392.0,
+        "y" : 3424.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -4035,8 +3894,8 @@
       "name" : "Action processing failure",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1560.0,
-        "y" : 3728.0
+        "x" : -1808.0,
+        "y" : 3704.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -4146,8 +4005,8 @@
       "name" : "Get sequence",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -960.0,
-        "y" : 3680.0
+        "x" : -1288.0,
+        "y" : 3704.0
       },
       "properties" : {
         "sequence" : "${fragment.index:plus(${batchOffset})}",
@@ -4330,8 +4189,8 @@
       "name" : "Get actions URL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -744.0,
-        "y" : 1560.0
+        "x" : -1192.0,
+        "y" : 1568.0
       },
       "properties" : {
         "cdgType" : "actions",
@@ -4494,8 +4353,8 @@
       "name" : "Split actions",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -968.0,
-        "y" : 3376.0
+        "x" : -1288.0,
+        "y" : 3424.0
       },
       "properties" : {
         "Max String Length" : "20 MB",
@@ -5299,12 +5158,11 @@
       "name" : "Get cosponsors URL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -240.0,
+        "x" : -520.0,
         "y" : 1552.0
       },
       "properties" : {
         "cdgType" : "cosponsors",
-        "sequence" : "0",
         "Store State" : "Do not store state",
         "canonical-value-lookup-cache-size" : "100",
         "url" : "${cosponsorsUrl}"
@@ -5315,13 +5173,6 @@
           "dynamic" : true,
           "identifiesControllerService" : false,
           "name" : "cdgType",
-          "sensitive" : false
-        },
-        "sequence" : {
-          "displayName" : "sequence",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "sequence",
           "sensitive" : false
         },
         "Delete Attributes Expression" : {
@@ -5388,12 +5239,11 @@
       "name" : "Get text versions URL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 184.0,
-        "y" : 1552.0
+        "x" : 168.0,
+        "y" : 1560.0
       },
       "properties" : {
         "cdgType" : "textVersions",
-        "sequence" : "0",
         "Store State" : "Do not store state",
         "canonical-value-lookup-cache-size" : "100",
         "url" : "${textVersionsUrl}"
@@ -5404,13 +5254,6 @@
           "dynamic" : true,
           "identifiesControllerService" : false,
           "name" : "cdgType",
-          "sensitive" : false
-        },
-        "sequence" : {
-          "displayName" : "sequence",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "sequence",
           "sensitive" : false
         },
         "Delete Attributes Expression" : {
@@ -5477,12 +5320,11 @@
       "name" : "Get titles URL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 624.0,
+        "x" : 800.0,
         "y" : 1568.0
       },
       "properties" : {
         "cdgType" : "titles",
-        "sequence" : "0",
         "Store State" : "Do not store state",
         "canonical-value-lookup-cache-size" : "100",
         "url" : "${titlesUrl}"
@@ -5493,13 +5335,6 @@
           "dynamic" : true,
           "identifiesControllerService" : false,
           "name" : "cdgType",
-          "sensitive" : false
-        },
-        "sequence" : {
-          "displayName" : "sequence",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "sequence",
           "sensitive" : false
         },
         "Delete Attributes Expression" : {
@@ -5566,12 +5401,11 @@
       "name" : "Get Committees URL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1072.0,
-        "y" : 1568.0
+        "x" : 1360.0,
+        "y" : 1584.0
       },
       "properties" : {
         "cdgType" : "committees",
-        "sequence" : "0",
         "Store State" : "Do not store state",
         "canonical-value-lookup-cache-size" : "100",
         "url" : "${committeesUrl}"
@@ -5582,13 +5416,6 @@
           "dynamic" : true,
           "identifiesControllerService" : false,
           "name" : "cdgType",
-          "sensitive" : false
-        },
-        "sequence" : {
-          "displayName" : "sequence",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "sequence",
           "sensitive" : false
         },
         "Delete Attributes Expression" : {
@@ -5706,8 +5533,8 @@
       "name" : "Increment bill ingest failure",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 880.0,
-        "y" : 576.0
+        "x" : 832.0,
+        "y" : 584.0
       },
       "properties" : {
         "counter-name" : "Bill Ingest Failure",
@@ -5757,8 +5584,8 @@
       "name" : "Get sequence",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -400.0,
-        "y" : 3664.0
+        "x" : -392.0,
+        "y" : 3704.0
       },
       "properties" : {
         "sequence" : "${fragment.index:plus(${batchOffset})}",
@@ -6049,8 +5876,8 @@
       "name" : "Cosponsor processing failure",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -72.0,
-        "y" : 3824.0
+        "x" : -888.0,
+        "y" : 3704.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -6493,14 +6320,14 @@
       "name" : "Build cosponsor payload",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -424.0,
-        "y" : 3960.0
+        "x" : -384.0,
+        "y" : 4056.0
       },
       "properties" : {
         "Regular Expression" : "(?s)(^.*$)",
         "Replacement Value" : "$1",
         "Evaluation Mode" : "Entire text",
-        "Text to Prepend" : "{\n  \"query\": \"mutation IndexAction ($input: IndexActionInput!) { indexAction(input: $input) { action { id cdgId billId }}}\",\n  \"variables\": { \n    \"input\": {\n      \"url\": \"${url}\",\n      \"request\": ${request},\n      \"sequence\": ${sequence},\n      \"changeId\": \"${changeId}\",\n      \"action\": \n",
+        "Text to Prepend" : "{\n  \"query\": \"mutation IndexCosponsor ($input: IndexCosponsorInput!) { indexCosponsor(input: $input) { cosponsor { id cdgId billId }}}\",\n  \"variables\": { \n    \"input\": {\n      \"url\": \"${url}\",\n      \"request\": ${request},\n      \"sequence\": ${sequence},\n      \"changeId\": \"${changeId}\",\n      \"cosponsor\": \n",
         "Line-by-Line Evaluation Mode" : "All",
         "Character Set" : "UTF-8",
         "Maximum Buffer Size" : "1 MB",
@@ -7002,7 +6829,7 @@
       "name" : "Index bill failure",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 880.0,
+        "x" : 840.0,
         "y" : 832.0
       },
       "properties" : {
@@ -7257,6 +7084,6 @@
   "snapshotMetadata" : {
     "author" : "201bcb3a-356c-4d4c-93dd-647a2211c0d4",
     "flowIdentifier" : "ingestbill",
-    "timestamp" : 1759954497651
+    "timestamp" : 1759956823582
   }
 }
