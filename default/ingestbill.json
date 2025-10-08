@@ -349,6 +349,36 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "39d5fab3-ec4f-3bea-a358-5cf62486d52f",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "403ca6a6-43af-3398-967b-9c01ab0a2df8",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "abafc625-0199-1000-507b-4208d9edd3fc",
+        "name" : "Split Committees",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 84
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "7b471f13-c374-35f0-9224-3508ba7eae66",
         "name" : "Funnel",
         "type" : "FUNNEL"
@@ -461,6 +491,36 @@
         "type" : "FUNNEL"
       },
       "zIndex" : 71
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "39d5fab3-ec4f-3bea-a358-5cf62486d52f",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "57c0cde4-403b-3d07-9cdc-a37f1ed37a55",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "abafb915-0199-1000-dfdf-2f697625ee30",
+        "name" : "Split titles",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 83
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -709,7 +769,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "588b0317-dfc0-36d3-910e-bf45ab09a533",
-        "name" : "Zero batchOffset",
+        "name" : "Reset parameters",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -1308,6 +1368,36 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "75d24669-9c05-3b9c-afa3-d32a96602194",
+        "name" : "subtype ingest failure",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "e36e4da1-d947-3109-b894-3599e4fa2ffb",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "39d5fab3-ec4f-3bea-a358-5cf62486d52f",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "zIndex" : 85
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "aba9ca87-0199-1000-abd5-7e12ff7dfe31",
         "name" : "Split text versions",
         "type" : "PROCESSOR"
@@ -1368,8 +1458,8 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "6b3c31ff-e2b9-3875-91f4-014491ff3ab0",
-        "name" : "Get batch",
+        "id" : "009ca0e0-b464-38c3-bf6f-3d11d6676447",
+        "name" : "Filter null URLs",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -1416,7 +1506,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "588b0317-dfc0-36d3-910e-bf45ab09a533",
-        "name" : "Zero batchOffset",
+        "name" : "Reset parameters",
         "type" : "PROCESSOR"
       },
       "zIndex" : 81
@@ -1644,7 +1734,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "03da26b9-0cc8-36aa-996d-9ec1a9543255",
       "position" : {
-        "x" : -816.0,
+        "x" : -824.0,
         "y" : 2704.0
       }
     }, {
@@ -1685,7 +1775,7 @@
       "identifier" : "e0172190-767c-32ff-8e1b-a0884b3b1752",
       "position" : {
         "x" : -296.0,
-        "y" : 2448.0
+        "y" : 2376.0
       }
     } ],
     "identifier" : "flow-contents-group",
@@ -2407,18 +2497,27 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "588b0317-dfc0-36d3-910e-bf45ab09a533",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "Zero batchOffset",
+      "name" : "Reset parameters",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : 160.0,
         "y" : 1032.0
       },
       "properties" : {
+        "variables" : "",
         "Store State" : "Do not store state",
         "canonical-value-lookup-cache-size" : "100",
-        "batchOffset" : "0"
+        "batchOffset" : "0",
+        "query" : ""
       },
       "propertyDescriptors" : {
+        "variables" : {
+          "displayName" : "variables",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "variables",
+          "sensitive" : false
+        },
         "Delete Attributes Expression" : {
           "displayName" : "Delete Attributes Expression",
           "dynamic" : false,
@@ -2445,6 +2544,13 @@
           "dynamic" : true,
           "identifiesControllerService" : false,
           "name" : "batchOffset",
+          "sensitive" : false
+        },
+        "query" : {
+          "displayName" : "query",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "query",
           "sensitive" : false
         },
         "Stateful Variables Initial Value" : {
@@ -2778,6 +2884,117 @@
       "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
       "yieldDuration" : "1 sec"
     }, {
+      "autoTerminatedRelationships" : [ "success" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.6.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "75d24669-9c05-3b9c-afa3-d32a96602194",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "subtype ingest failure",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1784.0,
+        "y" : 4576.0
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "Log FlowFile Properties" : "true",
+        "Log Level" : "error",
+        "attributes-to-log-regex" : ".*",
+        "Output Format" : "Line per Attribute",
+        "Log Payload" : "false"
+      },
+      "propertyDescriptors" : {
+        "Log prefix" : {
+          "displayName" : "Log prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log prefix",
+          "sensitive" : false
+        },
+        "character-set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "Log FlowFile Properties" : {
+          "displayName" : "Log FlowFile Properties",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log FlowFile Properties",
+          "sensitive" : false
+        },
+        "Log Level" : {
+          "displayName" : "Log Level",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Level",
+          "sensitive" : false
+        },
+        "attributes-to-ignore-regex" : {
+          "displayName" : "Attributes to Ignore by Regular Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attributes-to-ignore-regex",
+          "sensitive" : false
+        },
+        "Attributes to Ignore" : {
+          "displayName" : "Attributes to Ignore",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Ignore",
+          "sensitive" : false
+        },
+        "Attributes to Log" : {
+          "displayName" : "Attributes to Log",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Log",
+          "sensitive" : false
+        },
+        "attributes-to-log-regex" : {
+          "displayName" : "Attributes to Log by Regular Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attributes-to-log-regex",
+          "sensitive" : false
+        },
+        "Output Format" : {
+          "displayName" : "Output Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Format",
+          "sensitive" : false
+        },
+        "Log Payload" : {
+          "displayName" : "Log Payload",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Payload",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.LogAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -2796,8 +3013,8 @@
       "name" : "Get offset",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -968.0,
-        "y" : 2248.0
+        "x" : -976.0,
+        "y" : 2000.0
       },
       "properties" : {
         "Store State" : "Do not store state",
@@ -3039,8 +3256,8 @@
       "name" : "Get sequence",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -952.0,
-        "y" : 3944.0
+        "x" : -960.0,
+        "y" : 3928.0
       },
       "properties" : {
         "sequence" : "${fragment.index:plus(${batchOffset})}",
@@ -3121,7 +3338,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -448.0,
-        "y" : 2688.0
+        "y" : 2656.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -3312,8 +3529,8 @@
       "name" : "Get next batch",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -968.0,
-        "y" : 2488.0
+        "x" : -976.0,
+        "y" : 2328.0
       },
       "properties" : {
         "Destination" : "flowfile-attribute",
@@ -3395,7 +3612,7 @@
       "name" : "Split actions",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -960.0,
+        "x" : -968.0,
         "y" : 3376.0
       },
       "properties" : {
@@ -3454,7 +3671,7 @@
       "name" : "Split text versions",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 168.0,
+        "x" : 184.0,
         "y" : 3376.0
       },
       "properties" : {
@@ -3894,7 +4111,7 @@
       "name" : "Create action graphql params",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -952.0,
+        "x" : -960.0,
         "y" : 4176.0
       },
       "properties" : {
@@ -5050,7 +5267,7 @@
       "name" : "Get action",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -952.0,
+        "x" : -960.0,
         "y" : 3640.0
       },
       "properties" : {
@@ -5226,6 +5443,6 @@
   "snapshotMetadata" : {
     "author" : "201bcb3a-356c-4d4c-93dd-647a2211c0d4",
     "flowIdentifier" : "ingestbill",
-    "timestamp" : 1759935671437
+    "timestamp" : 1759944553633
   }
 }
