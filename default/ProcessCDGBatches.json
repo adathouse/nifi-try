@@ -79,6 +79,36 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "8d37e6cc-0199-1000-ea6b-3907f5e85eeb",
+        "name" : "Get CDG batch",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1899633c-ef3e-3fe2-9d5e-8286bf2c5494",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "31dbef19-514b-3b86-ae4f-51abbc17a18e",
+        "name" : "Throttle requests",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 47
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "be43b3c9-23cc-36dd-8b2e-c1bec161cc2f",
         "name" : "Get change id",
         "type" : "PROCESSOR"
@@ -109,8 +139,8 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "8d37e6cc-0199-1000-ea6b-3907f5e85eeb",
-        "name" : "Get CDG batch",
+        "id" : "c9814479-0199-1000-7eba-41f7a7a1bc7b",
+        "name" : "Filter null URLs",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -139,8 +169,8 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "8d37e6cc-0199-1000-ea6b-3907f5e85eeb",
-        "name" : "Get CDG batch",
+        "id" : "c9814479-0199-1000-7eba-41f7a7a1bc7b",
+        "name" : "Filter null URLs",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -226,6 +256,36 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "31dbef19-514b-3b86-ae4f-51abbc17a18e",
+        "name" : "Throttle requests",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "5d4ca3bd-9d12-30b8-9451-df6910816afd",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c9814479-0199-1000-7eba-41f7a7a1bc7b",
+        "name" : "Filter null URLs",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 46
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
         "comments" : "\nCreate the query and variables field for the GraphQL payload. \n\nThe priority is the current time - update date (with text) of the record. This is rough, since the updated date is a date, so the timestamp is set to midnight, so priority goes down as the day progresses, but dates still work.",
         "groupId" : "flow-contents-group",
         "id" : "56c44246-cd01-3b17-aeec-cbe6142c15db",
@@ -250,6 +310,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 21
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "023aae6b-3899-3f5a-a6b2-fb3cfd278215",
+        "name" : "Batch failure",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "6e37ebc8-3ddb-3cab-b558-386beca2c207",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "31dbef19-514b-3b86-ae4f-51abbc17a18e",
+        "name" : "Throttle requests",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 45
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -757,8 +847,8 @@
       "name" : "Start bill batch iterator",
       "portFunction" : "STANDARD",
       "position" : {
-        "x" : 256.0,
-        "y" : -360.0
+        "x" : 232.0,
+        "y" : -688.0
       },
       "scheduledState" : "ENABLED",
       "type" : "INPUT_PORT"
@@ -857,8 +947,8 @@
       "name" : "Batch failure",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -536.0,
-        "y" : -336.0
+        "x" : -480.0,
+        "y" : -168.0
       },
       "properties" : {
         "character-set" : "UTF-8",
@@ -1374,6 +1464,101 @@
       "type" : "org.apache.nifi.processors.standard.LogAttribute",
       "yieldDuration" : "1 sec"
     }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.6.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "31dbef19-514b-3b86-ae4f-51abbc17a18e",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Throttle requests",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 184.0,
+        "y" : -312.0
+      },
+      "properties" : {
+        "Rate Exceeded Strategy" : "Hold FlowFile",
+        "Time Duration" : "1 min",
+        "Maximum Rate" : "60",
+        "Rate Control Criteria" : "flowfile count"
+      },
+      "propertyDescriptors" : {
+        "Rate Exceeded Strategy" : {
+          "displayName" : "Rate Exceeded Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Rate Exceeded Strategy",
+          "sensitive" : false
+        },
+        "Maximum FlowFile Rate" : {
+          "displayName" : "Maximum FlowFile Rate",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum FlowFile Rate",
+          "sensitive" : false
+        },
+        "Time Duration" : {
+          "displayName" : "Time Duration",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Time Duration",
+          "sensitive" : false
+        },
+        "Grouping Attribute" : {
+          "displayName" : "Grouping Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Grouping Attribute",
+          "sensitive" : false
+        },
+        "Maximum Rate" : {
+          "displayName" : "Maximum Rate",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Rate",
+          "sensitive" : false
+        },
+        "Rate Controlled Attribute" : {
+          "displayName" : "Rate Controlled Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Rate Controlled Attribute",
+          "sensitive" : false
+        },
+        "Rate Control Criteria" : {
+          "displayName" : "Rate Control Criteria",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Rate Control Criteria",
+          "sensitive" : false
+        },
+        "Maximum Data Rate" : {
+          "displayName" : "Maximum Data Rate",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Data Rate",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ControlRate",
+      "yieldDuration" : "1 sec"
+    }, {
       "autoTerminatedRelationships" : [ "success" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -1540,8 +1725,8 @@
       "name" : "Get CDG batch",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 208.0,
-        "y" : -80.0
+        "x" : 184.0,
+        "y" : -88.0
       },
       "properties" : {
         "Request Content-Encoding" : "DISABLED",
@@ -1853,8 +2038,8 @@
       "name" : "Get next batch",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -528.0,
-        "y" : 72.0
+        "x" : -1160.0,
+        "y" : -184.0
       },
       "properties" : {
         "Destination" : "flowfile-attribute",
@@ -2365,6 +2550,57 @@
       "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
       "yieldDuration" : "1 sec"
     }, {
+      "autoTerminatedRelationships" : [ "urlIsEmpty" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.6.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c9814479-0199-1000-7eba-41f7a7a1bc7b",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Filter null URLs",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 184.0,
+        "y" : -528.0
+      },
+      "properties" : {
+        "Routing Strategy" : "Route to Property name",
+        "urlIsEmpty" : "${url:isEmpty()}"
+      },
+      "propertyDescriptors" : {
+        "Routing Strategy" : {
+          "displayName" : "Routing Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Routing Strategy",
+          "sensitive" : false
+        },
+        "urlIsEmpty" : {
+          "displayName" : "urlIsEmpty",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "urlIsEmpty",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
       "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -2447,6 +2683,6 @@
   "snapshotMetadata" : {
     "author" : "201bcb3a-356c-4d4c-93dd-647a2211c0d4",
     "flowIdentifier" : "ProcessCDGBatches",
-    "timestamp" : 1759859098772
+    "timestamp" : 1760023466746
   }
 }
