@@ -2589,7 +2589,7 @@
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ "Original" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "backoffMechanism" : "YIELD_PROCESSOR",
       "bulletinLevel" : "WARN",
       "bundle" : {
         "artifact" : "nifi-standard-nar",
@@ -2602,7 +2602,7 @@
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "427c6329-a370-3edf-bfb3-8980c6bf17b0",
-      "maxBackoffPeriod" : "10 mins",
+      "maxBackoffPeriod" : "20 mins",
       "name" : "Get bill",
       "penaltyDuration" : "30 sec",
       "position" : {
@@ -2892,7 +2892,7 @@
         }
       },
       "retriedRelationships" : [ "Failure", "No Retry", "Retry" ],
-      "retryCount" : 10,
+      "retryCount" : 20,
       "runDurationMillis" : 0,
       "scheduledState" : "ENABLED",
       "schedulingPeriod" : "0 sec",
@@ -3304,7 +3304,7 @@
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ "Original" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "backoffMechanism" : "YIELD_PROCESSOR",
       "bulletinLevel" : "WARN",
       "bundle" : {
         "artifact" : "nifi-standard-nar",
@@ -3317,7 +3317,7 @@
       "executionNode" : "ALL",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "6b3c31ff-e2b9-3875-91f4-014491ff3ab0",
-      "maxBackoffPeriod" : "10 mins",
+      "maxBackoffPeriod" : "20 mins",
       "name" : "Get batch",
       "penaltyDuration" : "30 sec",
       "position" : {
@@ -3607,7 +3607,7 @@
         }
       },
       "retriedRelationships" : [ "Failure", "No Retry", "Retry" ],
-      "retryCount" : 10,
+      "retryCount" : 20,
       "runDurationMillis" : 0,
       "scheduledState" : "ENABLED",
       "schedulingPeriod" : "0 sec",
@@ -3634,7 +3634,7 @@
       "name" : "subtype ingest failure",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 632.0,
+        "x" : 624.0,
         "y" : 5088.0
       },
       "properties" : {
@@ -3745,8 +3745,8 @@
       "name" : "Get offset",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -1272.0,
-        "y" : 2008.0
+        "x" : -1280.0,
+        "y" : 1992.0
       },
       "properties" : {
         "Store State" : "Do not store state",
@@ -6852,7 +6852,7 @@
       "properties" : {
         "Rate Exceeded Strategy" : "Hold FlowFile",
         "Time Duration" : "1 min",
-        "Maximum Rate" : "100",
+        "Maximum Rate" : "80",
         "Rate Control Criteria" : "flowfile count"
       },
       "propertyDescriptors" : {
@@ -7291,6 +7291,6 @@
   "snapshotMetadata" : {
     "author" : "201bcb3a-356c-4d4c-93dd-647a2211c0d4",
     "flowIdentifier" : "ingestbill",
-    "timestamp" : 1760029957638
+    "timestamp" : 1760048656278
   }
 }
