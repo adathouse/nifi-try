@@ -6852,7 +6852,7 @@
       "properties" : {
         "Rate Exceeded Strategy" : "Hold FlowFile",
         "Time Duration" : "1 min",
-        "Maximum Rate" : "60",
+        "Maximum Rate" : "100",
         "Rate Control Criteria" : "flowfile count"
       },
       "propertyDescriptors" : {
@@ -6947,7 +6947,7 @@
       "properties" : {
         "Rate Exceeded Strategy" : "Hold FlowFile",
         "Time Duration" : "1 min",
-        "Maximum Rate" : "80",
+        "Maximum Rate" : "150",
         "Rate Control Criteria" : "flowfile count"
       },
       "propertyDescriptors" : {
@@ -7291,6 +7291,6 @@
   "snapshotMetadata" : {
     "author" : "201bcb3a-356c-4d4c-93dd-647a2211c0d4",
     "flowIdentifier" : "ingestbill",
-    "timestamp" : 1760023482011
+    "timestamp" : 1760029957638
   }
 }
